@@ -7,7 +7,19 @@ const Home = () => {
         event.preventDefault();
         const name = event.target.name.value;
         const Description = event.target.Description.value;
-        console.log(name,Description)
+        const url = `http://localhost:5000/addTask`
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({name,Description})
+        })
+            .then(res => res.json())
+            .then(result => {
+                event.target.reset();
+                window.location.reload();
+            })
     }
     return (
         <div>

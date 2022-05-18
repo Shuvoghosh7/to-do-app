@@ -14,7 +14,9 @@ const Task = () => {
             <div className='row '>
                 {
                     tasks.map(task => <ShowTask
+                       key={task._id}
                         task={task}
+                        setTask={setTask}
                     />)
                 }
             </div>
