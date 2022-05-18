@@ -4,7 +4,7 @@ import ShowTask from './ShowTask';
 const Task = () => {
     const [tasks, setTask] = useState([])
     useEffect(() => {
-        fetch("task.json")
+        fetch("http://localhost:5000/tasks")
             .then(res => res.json())
             .then(data => setTask(data))
     }, [])
