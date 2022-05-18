@@ -4,7 +4,7 @@ import ShowTask from './ShowTask';
 const Task = () => {
     const [tasks, setTask] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/tasks")
+        fetch("https://powerful-taiga-62322.herokuapp.com/tasks")
             .then(res => res.json())
             .then(data => setTask(data))
     }, [])

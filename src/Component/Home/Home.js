@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import './Home.css'
 import Task from './Task/Task';
 
@@ -7,7 +8,7 @@ const Home = () => {
         event.preventDefault();
         const name = event.target.name.value;
         const Description = event.target.Description.value;
-        const url = `http://localhost:5000/addTask`
+        const url = `https://powerful-taiga-62322.herokuapp.com/addTask`
         fetch(url, {
             method: 'POST',
             headers: {
@@ -19,6 +20,7 @@ const Home = () => {
             .then(result => {
                 event.target.reset();
                 window.location.reload();
+                toast.success("Sucessfully add new task")
             })
     }
     return (

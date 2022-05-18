@@ -7,7 +7,7 @@ const ShowTask = ({ task}) => {
     const handleDelete=(id)=>{
         const proceed = window.confirm("are you sure?")
         if(proceed){
-            const url =`http://localhost:5000/tasks/${id}`
+            const url =`https://powerful-taiga-62322.herokuapp.com/tasks/${id}`
             fetch(url,{
                 method:'DELETE'
             })
