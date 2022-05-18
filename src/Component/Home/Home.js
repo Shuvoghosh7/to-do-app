@@ -1,5 +1,7 @@
 import React from 'react';
 import './Home.css'
+import Task from './Task/Task';
+
 const Home = () => {
     const addNewTask =(event)=>{
         event.preventDefault();
@@ -20,7 +22,7 @@ const Home = () => {
 
             </div>
             <div>
-                    
+                   <Task/>
             </div>
         </div>
     );
